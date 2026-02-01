@@ -1,0 +1,82 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f2f5;
+    font-family: 'Helvetica Neue', sans-serif;
+    overflow: hidden; /* Evita que el botón cree scroll al moverse */
+    touch-action: manipulation; /* Optimiza para toques */
+}
+
+.container {
+    background-color: white;
+    width: 85%;
+    max-width: 400px;
+    padding: 2rem;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.emoji-header {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: #333;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+p {
+    color: #666;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column; /* Botones uno sobre otro para móvil */
+    gap: 15px;
+    margin-top: 2rem;
+}
+
+button {
+    padding: 18px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#btn-yes {
+    background-color: #28a745;
+    color: white;
+    order: 1; /* El SI arriba */
+}
+
+#btn-no {
+    background-color: #dc3545;
+    color: white;
+    position: relative;
+    order: 2; /* El NO abajo */
+    transition: 0.1s; /* Movimiento más rápido para el dedo */
+}
+
+.hidden {
+    display: none;
+}
+
+#celebration {
+    font-size: 4rem;
+    animation: bounce 0.5s infinite alternate;
+}
+
+@keyframes bounce {
+    from { transform: scale(1); }
+    to { transform: scale(1.2); }
+}
